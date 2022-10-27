@@ -1,5 +1,5 @@
 
-// expected to replace: 3
+// expected to replace: 1
 
 #include "stdio.h"
 #include "time.h"

@@ -53,19 +53,19 @@ def p_plus_stm(p):
         variables[operand1] = global_ctr
         global_ctr += 1
         # declare new variables
-        print("\tdouble " + str(operand1) + str(variables[operand1]) + ";") # double k0;
+        print("\tdouble " + str(operand1) + str(variables[operand1]) + " = " + operand1 + ";") # double k0;
     operand1 = p[3] + str(variables[operand1]) # operand1 becomes k1 for ex
     
     if(operand2 not in variables):
         variables[operand2] = global_ctr
         global_ctr += 1
-        print("\tdouble " + str(operand2 + str(variables[operand2])) + ";") # double g1;
+        print("\tdouble " + str(operand2 + str(variables[operand2])) + " = " + operand2 + ";") # double g1;
     operand2 = p[5] + str(variables[operand2])
 
     # always assign new number to assignment
     variables[assign_var] = global_ctr
     new_assign_variable = assign_var + str(global_ctr)
-    print("\tdouble " + new_assign_variable + ";") # double d2;
+    print("\tdouble " + new_assign_variable + " = " + assign_var + ";") # double d2;
     global_ctr += 1
 
     # once variables are numbered and declared
